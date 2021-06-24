@@ -1,0 +1,23 @@
+<%- include('partials/header'); %>  
+
+<div class="card border-success mx-auto mt-5 text-center" style="max-width: 18rem;">
+  <div class="card-header h2 bg-dark text-light">Agregar Contacto</div>
+  <div class="card-body text-success">
+     <form action="/add" method="POST" enctype="multipart/form-data">
+      <input class="list-group-item list-group-item-action" type="text" name="nombrecontacto"  placeholder="Ingresa el nombre...">
+      <input class="list-group-item list-group-item-action" type="text" name="correo" placeholder="Ingresa el correo...">
+      <input class="list-group-item list-group-item-action" type="text" name="telefono" placeholder="Ingresa el telefono...">
+      <input class="list-group-item list-group-item-action" type="date" name="fechanacimiento" >
+      <input  class="list-group-item list-group-item-action" type="file" name="imagen">
+      <button type="submit" class="btn btn-success mt-3">Guardar Cambios</button>
+    </form> 
+    <a href="/" class="btn btn-danger mt-3">Cancelar</a>
+  </div>
+</div>
+
+
+
+
+
+
+<%- include('partials/footer'); %>

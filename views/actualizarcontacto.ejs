@@ -1,0 +1,42 @@
+<%- include('partials/header'); %>
+
+<div
+  class="card border-success mx-auto mt-5 text-center"
+  style="max-width: 18rem"
+>
+  <div class="card-header h2 bg-dark text-light">Actualizar Contacto</div>
+  <div class="card-body text-success">
+    <form action="/update/<%= data.idcontacto %>" method="POST">
+      <input
+        class="list-group-item list-group-item-action"
+        value="<%= data.nombrecontacto %>"
+        type="text"
+        name="nombrecontacto"
+      />
+      <input
+        class="list-group-item list-group-item-action"
+        value="<%= data.correo %>"
+        type="text"
+        name="correo"
+      />
+      <input
+        class="list-group-item list-group-item-action"
+        value="<%= data.telefono %>"
+        type="text"
+        name="telefono"
+      />
+      <input
+        class="list-group-item list-group-item-action"
+        type="date"
+        value="<%= data.fechanacimiento %>"
+        name="fechanacimiento"
+      />
+      <button type="submit" class="btn btn-success mt-3">
+        Guardar Cambios
+      </button>
+    </form>
+    <a href="/" class="btn btn-danger mt-3">Cancelar</a>
+  </div>
+</div>
+
+<%- include('partials/footer'); %>
